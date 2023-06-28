@@ -7,8 +7,8 @@ class AuthorsController < ApplicationController
   end
 
   def show
-    author = Author.find(params[:id])
-    render json: author
+     author = Author.find(params[:id])
+    render json: author, serializer: AuthorSerializer
   end
 
   private
